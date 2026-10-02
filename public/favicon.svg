@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" fill="#04070b"/>
+  <!-- 外层菱形框：莱茵生命冷青 -->
+  <path d="M32 6 L58 32 L32 58 L6 32 Z" stroke="#3fd4c8" stroke-width="2" fill="none" opacity="0.9"/>
+  <!-- 内层晶格节点 -->
+  <path d="M32 18 L46 32 L32 46 L18 32 Z" stroke="#8ba2b8" stroke-width="1" fill="none" opacity="0.5"/>
+  <!-- 中心能量核 -->
+  <path d="M32 26 L38 32 L32 38 L26 32 Z" fill="#9ffff0"/>
+  <!-- 波峰警示黄点缀 -->
+  <circle cx="32" cy="32" r="1.6" fill="#ffd23f"/>
+  <!-- 四角刻度 -->
+  <path d="M32 6 L32 11 M58 32 L53 32 M32 58 L32 53 M6 32 L11 32" stroke="#3fd4c8" stroke-width="2" opacity="0.7"/>
+</svg>

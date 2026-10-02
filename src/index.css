@@ -1,0 +1,102 @@
+/* ==========================================================================
+   index.css — 全局样式 / 鹰角式 HUD 设计系统
+   ==========================================================================
+   明日方舟「莱茵生命」视觉语言：
+   - 冷调暗场，高对比
+   - 硬朗直角 + 切角 (angled corner cuts)，几乎无圆角
+   - 大量全大写英文 + 等宽数字，高字距
+   - 细分割线 / 坐标网格 / 扫描线 / 编号标签
+   - 动效：快速滑入、逐行揭示、故障闪烁、硬切
+   ========================================================================== */
+
+/* —— 字体（@fontsource，woff2 打进 bundle，无外链）—— */
+@import "@fontsource-variable/oswald";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/700.css";
+@import "@fontsource/share-tech-mono/400.css";
+
+/* 颜色变量由 main.tsx 的 injectPalette() 写入 :root（--c-*）。
+   这里定义与颜色无关的结构令牌。 */
+:root {
+  /* 字体族 */
+  --f-display: "Oswald Variable", "Oswald", "Noto Sans SC", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", "Share Tech Mono", ui-monospace, "SFMono-Regular", monospace;
+  --f-cn: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+
+  /* 节奏 */
+  --gut: clamp(16px, 3.2vw, 40px); /* 安全边距，手机也保住侧栏 */
+  --hair: 1px;
+
+  /* 动效时序——基准值 × --motion（由 main.tsx 的 injectMotion() 写入 :root，
+     当前 UI_TIME_SCALE=1.45，整体放缓约 45%）。改速度只动 motion.ts 一处。 */
+  --motion: 1;
+  --t-fast: calc(180ms * var(--motion));
+  --t-med: calc(320ms * var(--motion));
+  --t-slow: calc(620ms * var(--motion));
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-hard: cubic-bezier(0.86, 0, 0.07, 1);
+
+  color-scheme: dark;
+  font-family: var(--f-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--c-void, #04070b);
+}
+
+body {
+  color: var(--c-steel, #8ba2b8);
+  /* 关闭移动端双击缩放带来的延迟感 */
+  touch-action: manipulation;
+}
+
+/* 3D 画布铺满，作为 HUD 的背景层 */
+.scene-canvas {
+  position: fixed !important;
+  inset: 0;
+  z-index: 0;
+}
+
+/* 全局选区色 */
+::selection {
+  background: var(--c-coolant, #3fd4c8);
+  color: var(--c-void, #04070b);
+}
+
+/* —— 工具类 —— */
+.u-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.u-mono-num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* 无障碍：尊重系统的减少动态偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
