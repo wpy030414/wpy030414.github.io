@@ -8,7 +8,7 @@
 import type { MessageKey } from "./i18n/messages";
 
 /** 项目 id，同时驱动词条 key（project.<id>.code/name/cn/desc） */
-export type ProjectId = "car-sign-generator" | "pterosaur" | "claw-clip" | "digiboard";
+export type ProjectId = "galastar" | "digiboard" | "claw-clip" | "car-sign-generator" ;
 
 /** 状态标签（映射到词条 status.*） */
 export type ProjectStatus = "online" | "wip" | "archived" | "sealed";
@@ -21,10 +21,10 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  { id: "galastar", status: "online", href: "/galastar" },
   { id: "digiboard", status: "online", href: "/digiboard" },
-  { id: "car-sign-generator", status: "online", href: "/car-sign-generator" },
-  { id: "pterosaur", status: "online", href: "/pterosaur" },
   { id: "claw-clip", status: "online", href: "/claw-clip" },
+  { id: "car-sign-generator", status: "online", href: "/car-sign-generator" },
 ];
 
 /** 由 project id + 字段拼出类型安全的词条 key */

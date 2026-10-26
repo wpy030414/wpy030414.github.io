@@ -18,18 +18,18 @@
 
 export const messages = {
   /* —— 文档 meta（运行时写入 <title> / <meta>）—— */
-  "meta.title": "XRL DEMONSTRATION",
+  "meta.title": "XRL PORTAL",
   "meta.description":
-    "XRL DEMONSTRATION — 创意项目门户",
+    "XRL PORTAL — 创意项目门户",
 
   /* —— 开机引导幕 —— */
   "boot.label": "initializing imagination",
   "boot.percent": "{v}%",
 
   /* —— 顶栏 —— */
-  "topbar.org": "XRL DEMONSTRATION",
-  "topbar.domain": "DEMO.XRL.IM",
-  "topbar.version": "v26.10.2",
+  "topbar.org": "XRL PORTAL",
+  "topbar.domain": "XRL.IM",
+  "topbar.version": "v26.10.26",
 
   /* —— 标题区 —— */
   "title.eyebrow.brand": "PORTAL",
@@ -68,25 +68,25 @@ export const messages = {
 
   /* —— 项目条目（key 形如 project.<id>.<field>，由 ProjectId 驱动）——
      code 的编号顺序跟随 content.ts 中 projects 的排列，改序需同步两处。 */
-  "project.digiboard.code": "PRJ-01",
+  "project.galastar.code": "PRJ-01",
+  "project.galastar.name": "GALASTAR",
+  "project.galastar.cn": "视觉小说 IDE",
+  "project.galastar.desc": "浏览器里的游戏工坊",
+
+  "project.digiboard.code": "PRJ-02",
   "project.digiboard.name": "DIGIBOARD",
   "project.digiboard.cn": "赛博拼豆",
-  "project.digiboard.desc": "赛博风格的拼豆像素创作板",
+  "project.digiboard.desc": "强大的拼豆像素创作板",
 
-  "project.car-sign-generator.code": "PRJ-02",
-  "project.car-sign-generator.name": "CAR SIGN",
-  "project.car-sign-generator.cn": "车牌生成",
-  "project.car-sign-generator.desc": "生成风格化的车牌图形，可自定义与导出",
-
-  "project.pterosaur.code": "PRJ-03",
-  "project.pterosaur.name": "PTEROSAUR",
-  "project.pterosaur.cn": "音乐播放器",
-  "project.pterosaur.desc": "浏览器里的网页音乐播放器",
-
-  "project.claw-clip.code": "PRJ-04",
+  "project.claw-clip.code": "PRJ-03",
   "project.claw-clip.name": "CLAW CLIP",
   "project.claw-clip.cn": "富文本记事",
-  "project.claw-clip.desc": "支持富文本排版的轻量记事本",
+  "project.claw-clip.desc": "支持 Markdown 的开放记事本",
+
+  "project.car-sign-generator.code": "PRJ-04",
+  "project.car-sign-generator.name": "CAR SIGN",
+  "project.car-sign-generator.cn": "车牌模拟器",
+  "project.car-sign-generator.desc": "生成风格化的车牌图形，支持多国标准",
 } as const;
 
 export type MessageKey = keyof typeof messages;

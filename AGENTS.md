@@ -1,6 +1,6 @@
 # AGENTS.md
 
-XRL DEMONSTRATION（`demo.xrl.im`）——一个纯前端 3D 创意项目门户。对外只呈现 XRL 自己的品牌与作品；内部视觉母题是「规则集合体的简谐行波」晶格场，光影语言参照《明日方舟》莱茵生命（属设计 DNA，不出现在页面文案上）。本文件帮助 Agent / 协作者快速定位项目、遵守约定、不破坏既有的单一真相源结构。
+XRL PORTAL（`xrl.im`）——一个纯前端 3D 创意项目门户。对外只呈现 XRL 自己的品牌与作品；内部视觉母题是「规则集合体的简谐行波」晶格场，光影语言参照《明日方舟》莱茵生命（属设计 DNA，不出现在页面文案上）。本文件帮助 Agent / 协作者快速定位项目、遵守约定、不破坏既有的单一真相源结构。
 
 ## 概述
 
@@ -12,7 +12,7 @@ XRL DEMONSTRATION（`demo.xrl.im`）——一个纯前端 3D 创意项目门户�
 - **范围内**：首页 3D 场景、HUD 平面层、配色 / 文案 / 动画三大令牌系统、构建与部署配置。
 - **非目标（明确排除）**：
   - 不做后端、API、数据库、鉴权。
-  - 不做多页面路由——目前是单页；底部导航四个项目均为外链，点击**新开标签页**（`target="_blank"`）跳转到同域名下的独立子站（`/digiboard`、`/car-sign-generator`、`/pterosaur`、`/claw-clip`），子站本身不在本仓库。
+  - 不做多页面路由——目前是单页；底部导航四个项目均为外链，点击**新开标签页**（`target="_blank"`）跳转到同域名下的独立子站（`/galastar`、`/digiboard`、`/claw-clip`、`/car-sign-generator`），子站本身不在本仓库。
   - 不引入 i18n 运行时库 / 多语言切换——当前「i18n」仅为文案集中管理（单一 locale），不是国际化功能。
   - 不做移动端专属 3D 降级交互（仅做响应式布局隐藏次要 HUD）。
 
@@ -33,7 +33,7 @@ XRL DEMONSTRATION（`demo.xrl.im`）——一个纯前端 3D 创意项目门户�
 
 ### 全局规则 / 约定
 
-- **品牌与内部参照分离**：页面**可见文案**只呈现 XRL 自己的品牌（顶栏 `XRL DEMONSTRATION`、主标题 `THINK DIFFERENT`）与作品名，**不得**暴露内部设计参照或实现技术——世界观名词（莱茵生命 / 罗德岛）、视觉母题术语（简谐运动 / SHM 公式）、渲染库名（Three.js / r3f）一律不上页面。这些是内部设计 DNA，只允许出现在代码注释与本 `docs/` 里。改文案时守住这条边界。
+- **品牌与内部参照分离**：页面**可见文案**只呈现 XRL 自己的品牌（顶栏 `XRL PORTAL`、主标题 `THINK DIFFERENT`）与作品名，**不得**暴露内部设计参照或实现技术——世界观名词（莱茵生命 / 罗德岛）、视觉母题术语（简谐运动 / SHM 公式）、渲染库名（Three.js / r3f）一律不上页面。这些是内部设计 DNA，只允许出现在代码注释与本 `docs/` 里。改文案时守住这条边界。
 - **语言**：文档与注释用简体中文；代码标识符用英文。
 - **提交**：Conventional Commits（type/scope 英文，描述中文）。
 - **验证**：改动后必须跑 `pnpm exec tsc -b` + `pnpm exec vp lint` + `pnpm run build` 三连绿才算完成。lint 要求**零警告**（React Compiler 对 r3f `useFrame` 命令式改 camera 的误报，用 `/* oxlint-disable react/immutability */` 精准豁免并注释说明）。
@@ -60,4 +60,4 @@ XRL DEMONSTRATION（`demo.xrl.im`）——一个纯前端 3D 创意项目门户�
 | `src/index.css` / `src/hud.css` | 全局令牌 / HUD 样式（动画全走 `calc(×var(--motion))`） |
 | `.github/workflows/deploy.yml` | GitHub Pages 自动部署 |
 | `docs/` | PRD / ARCHITECTURE / DECISIONS / specs |
-| `CNAME` | GitHub Pages 自定义域名 `demo.xrl.im`（勿动） |
+| `CNAME` | GitHub Pages 自定义域名 `xrl.im`（勿动） |

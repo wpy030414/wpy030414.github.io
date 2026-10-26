@@ -1,10 +1,10 @@
-# XRL DEMONSTRATION — demo.xrl.im
+# XRL PORTAL — xrl.im
 
 > 创意项目门户首页。对外呈现 XRL 自己的品牌与作品；视觉母题是一片「规则集合体的简谐行波」晶格场，光影语言参照《明日方舟》「莱茵生命 (Rhine Lab)」（内部设计 DNA，不出现在页面上）。
 
 ## 这是什么？
 
-- **定位**：`demo.xrl.im` 的门户首页——一个纯前端、无后端的 3D 交互页面，作为创意项目集群的统一入口与品牌门面。
+- **定位**：`xrl.im` 的门户首页——一个纯前端、无后端的 3D 交互页面，作为创意项目集群的统一入口与品牌门面。
 - **解决的核心问题**：用一个有强烈辨识度的视觉语言（鹰角式 HUD + 莱茵生命光影）把访客的注意力锚定住，再把四个真实子项目干净地导向出去；同时把文案、配色、动画速度收敛为可一处修改的单一真相源，便于长期维护。
 
 ## 为什么存在？
@@ -24,7 +24,7 @@ pnpm preview   # 预览生产构建
 pnpm lint      # 格式 / lint / 类型检查（vp lint）
 ```
 
-部署到 GitHub Pages 由 `.github/workflows/deploy.yml` 自动完成（push 到 `main` 触发；自定义域名 `demo.xrl.im` 由仓库根的 `CNAME` 提供）。
+部署到 GitHub Pages 由 `.github/workflows/deploy.yml` 自动完成（push 到 `main` 触发；自定义域名 `xrl.im` 由仓库根的 `CNAME` 提供）。
 
 ## 当前状态
 
@@ -38,10 +38,10 @@ pnpm lint      # 格式 / lint / 类型检查（vp lint）
 
 | 编号 | 项目 | 路径 |
 |------|------|------|
-| PRJ-01 | 赛博拼豆 (DIGIBOARD) | `/digiboard` |
-| PRJ-02 | 车牌生成 (CAR SIGN) | `/car-sign-generator` |
-| PRJ-03 | 音乐播放器 (PTEROSAUR) | `/pterosaur` |
-| PRJ-04 | 富文本记事 (CLAW CLIP) | `/claw-clip` |
+| PRJ-01 | 视觉小说 IDE (GALASTAR) | `/galastar` |
+| PRJ-02 | 赛博拼豆 (DIGIBOARD) | `/digiboard` |
+| PRJ-03 | 富文本记事 (CLAW CLIP) | `/claw-clip` |
+| PRJ-04 | 车牌模拟器 (CAR SIGN) | `/car-sign-generator` |
 
 ## 核心技术
 

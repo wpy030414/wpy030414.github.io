@@ -105,7 +105,7 @@
   - A. 页面继续外露这些概念（保持「设计过程的透明」）。
   - B. 页面只呈现 XRL 自有品牌，内部参照退回代码注释与 `docs/`。
 - **决策**：采用 B。确立一条硬边界：
-  - **页面可见文案**只呈现 XRL 品牌（顶栏 `XRL DEMONSTRATION`、主标题 `THINK DIFFERENT`）与作品名。
+  - **页面可见文案**只呈现 XRL 品牌（顶栏 `XRL PORTAL`、主标题 `THINK DIFFERENT`）与作品名。
   - **不得出现在页面**：世界观名词（莱茵生命 / 罗德岛）、视觉母题术语（简谐运动 / SHM 公式）、渲染库名（Three.js / r3f）。
   - **允许出现在**：代码注释、`docs/`（ADR、ARCHITECTURE、specs）、组件与文件名（如 `HarmonicLattice.tsx`）——即内部层。
   - 主标题下引言取自 1997 Apple「Think Different」广告并如实署名 `— Steve Jobs, 1997`，在 README 授权段声明版权归属。
